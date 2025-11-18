@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SmartShop • Welcome</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <nav>
+    <div class="container navbar">
+      <div class="logo"><img src="./images/logo.svg" alt="logo"><strong>SmartShop</strong></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="wishlist.html">Wishlist</a></li>
+        <li><a href="cart.html">Cart <span class="cart-count small"></span></a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <h1>SmartShop — Shop Smarter, Live Better</h1>
+        <p>Fresh groceries, daily essentials, and eco-friendly picks — all in one beautiful, responsive UI. Designed as a complete frontend prototype you can extend later.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="shop.html">Start Shopping</a>
+          <a class="btn secondary" href="#why">Why SmartShop?</a>
+        </div>
+        <div class="small" style="margin-top:14px;color:var(--muted)">No backend required for this demo. Buttons show UI-only behaviour.</div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card"><img src="./images/apples.svg" alt="apples"><div class="small">Groceries</div></div>
+        <div class="hero-card"><img src="./images/milk.svg" alt="milk"><div class="small">Dairy</div></div>
+        <div class="hero-card"><img src="./images/headphones.svg" alt="head"><div class="small">Electronics</div></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div style="margin-top:12px" class="alert">⚠ Some items in your cart are expiring soon! (UI demo)</div>
+
+    <section id="why" class="features">
+      <h2 style="color:#fff">Why SmartShop?</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <h3>Expiry-aware cart</h3>
+          <p>Items show expiry dates with color-coded badges so you don't buy expired or near-expiry groceries.</p>
+        </div>
+        <div class="feature">
+          <h3>Eco-friendly highlights</h3>
+          <p>Eco items are tagged so users can make greener choices. The UI shows a summary of eco-savings.</p>
+        </div>
+        <div class="feature">
+          <h3>Budget & Health meter</h3>
+          <p>Visual budget progress and a cart health meter help users shop within budget and choose healthy options.</p>
+        </div>
+        <div class="feature">
+          <h3>Wishlist & Notes</h3>
+          <p>Save items for later and add personal reminders to product cards (UI-only but very useful to show in demo).</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories">
+      <h2 style="color:#fff;margin-bottom:8px">Shop by category</h2>
+      <div class="cat-list">
+        <div class="cat" onclick="location.href='shop.html#groceries'">
+          <img src="./images/apples.svg" alt=""><div><strong>Groceries</strong><div class="small">Fresh food & staples</div></div>
+        </div>
+        <div class="cat" onclick="location.href='shop.html#dairy'">
+          <img src="./images/milk.svg" alt=""><div><strong>Dairy</strong><div class="small">Milk, cheese & eggs</div></div>
+        </div>
+        <div class="cat" onclick="location.href='shop.html#electronics'">
+          <img src="./images/headphones.svg" alt=""><div><strong>Electronics</strong><div class="small">Small gadgets</div></div>
+        </div>
+        <div class="cat" onclick="location.href='shop.html#clothes'">
+          <img src="./images/tshirt.svg" alt=""><div><strong>Clothing</strong><div class="small">Casual & essentials</div></div>
+        </div>
+        <div class="cat" onclick="location.href='shop.html#giftcards'">
+          <img src="./images/giftcard.svg" alt=""><div><strong>Gift Cards</strong><div class="small">Gifts & vouchers</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="widgets" style="margin-top:18px">
+      <div class="widget">
+        <h3>💰 Budget</h3>
+        <div class="small">Your budget: ₹2000</div>
+        <div style="margin-top:8px" class="note">
+          <div style="background:#133d1f;padding:8px;border-radius:999px;color:#fff;font-weight:800;width:60%;text-align:center">₹1200 / ₹2000</div>
+        </div>
+      </div>
+      <div class="widget">
+        <h3>🥦 Cart Health Meter</h3>
+        <div class="small">More fruits & veggies → healthier cart</div>
+        <div style="margin-top:8px" class="note">
+          <div style="background:#7b3f00;padding:8px;border-radius:999px;color:#fff;font-weight:800;width:75%;text-align:center">75% Healthy</div>
+        </div>
+      </div>
+      <div class="widget">
+        <h3>🌱 Eco Summary</h3>
+        <div class="small">Your choices helped save 2kg CO₂ (UI demo)</div>
+      </div>
+    </section>
+
+    <section style="margin-top:26px">
+      <h2 style="color:#fff">What users say</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:12px">
+        <div class="note"><strong>“Love the expiry labels — saved me from buying old milk!”</strong><div class="small">— Priya</div></div>
+        <div class="note"><strong>“Clean UI, easy to navigate. Great for quick grocery runs.”</strong><div class="small">— Rohan</div></div>
+        <div class="note"><strong>“The eco badges are a nice touch for conscious shopping.”</strong><div class="small">— Meera</div></div>
+      </div>
+    </section>
+
+    <div style="height:32px"></div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>© 2025 SmartShop — UI demo</div>
+        <div class="small">Follow us on social media • Newsletter signup (UI only)</div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,13 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0%" stop-color="#e6b800"/>
+      <stop offset="100%" stop-color="#7a4c00"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="400" fill="url(#g)"/>
+  <g opacity="0.16" fill="#ffffff">
+    <text x="50%" y="55%" text-anchor="middle" font-size="140" font-family="Segoe UI, Roboto" font-weight="700">Mega Home Sale</text>
+  </g>
+</svg>

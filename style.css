@@ -1,0 +1,105 @@
+:root{
+  --brand:#0d47a1;
+  --brand-2:#1565c0;
+  --accent:#ffd54f;
+  --bg-1:#0b0f1a;
+  --muted:#98a0ad;
+  --success:#43a047;
+  --warn:#fb8c00;
+  --danger:#e53935;
+  --glass: rgba(255,255,255,0.04);
+  --shadow: 0 10px 30px rgba(2,6,23,0.6);
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family: "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial;
+  color:#e6eef8;
+  background: linear-gradient(180deg,#0b0f1a 0%, #071026 100%);
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:1180px;margin:0 auto;padding:0 18px}
+
+/* NAV */
+nav{background:linear-gradient(90deg,var(--brand),var(--brand-2));position:sticky;top:0;z-index:999;padding:10px 0;box-shadow:0 4px 20px rgba(2,6,23,0.6)}
+.navbar{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;color:#fff;font-size:20px}
+.logo img{width:36px;height:36px;border-radius:6px;background:#fff;padding:4px;box-shadow:0 4px 12px rgba(0,0,0,0.3)}
+.nav-links{display:flex;gap:22px;list-style:none;align-items:center}
+.nav-links a{color:#f3f7ff;text-decoration:none;font-weight:700;opacity:0.95}
+.nav-links a:hover{opacity:1;color:var(--accent)}
+.hamburger{display:none;cursor:pointer;flex-direction:column;gap:5px}
+.hamburger span{height:3px;width:24px;background:#fff;border-radius:3px;display:block}
+@media(max-width:860px){
+  .nav-links{position:absolute;right:18px;top:60px;background:linear-gradient(180deg,var(--brand-2),var(--brand));padding:12px;border-radius:12px;flex-direction:column;display:none;box-shadow:var(--shadow)}
+  .nav-links.show{display:flex}
+  .hamburger{display:flex}
+}
+
+/* HERO */
+.hero{min-height:56vh;display:flex;align-items:center;padding:56px 0;position:relative;background-image: linear-gradient(90deg, rgba(4,7,17,0.2) 0%, rgba(4,7,17,0.55) 100%), url('./images/banner.svg');background-size:cover;background-position:center}
+.hero-inner{display:flex;gap:28px;align-items:center;justify-content:space-between;width:100%}
+.hero-left{max-width:640px}
+.hero h1{font-size:48px;line-height:1.02;color:#fff;text-shadow:0 8px 40px rgba(2,6,23,0.6)}
+.hero p{color:var(--muted);margin:12px 0 24px;font-size:16px}
+.hero-cta{display:flex;gap:12px}
+.btn{border:0;padding:12px 18px;border-radius:999px;font-weight:800;cursor:pointer;box-shadow:0 8px 20px rgba(2,6,23,0.45);transition:transform .18s ease, box-shadow .18s ease}
+.btn.primary{background:linear-gradient(90deg,var(--accent),#ffd27a);color:#0b1624}
+.btn.secondary{background:transparent;border:2px solid rgba(255,255,255,0.06);color:#fff}
+.btn.primary:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,0.5)}
+.btn.secondary:hover{transform:translateY(-3px)}
+
+/* hero-right cards */
+.hero-right{display:flex;gap:16px;flex-wrap:wrap;justify-content:center}
+.hero-card{width:180px;height:120px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.02));display:flex;flex-direction:column;align-items:center;justify-content:center;backdrop-filter: blur(4px);box-shadow:var(--shadow)}
+.hero-card img{width:72px;height:60px;object-fit:contain}
+
+/* FEATURES */
+.features{padding:30px 0 12px}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:12px}
+.feature{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;box-shadow:0 8px 24px rgba(2,6,23,0.4);min-height:120px}
+.feature h3{color:#fff;margin-bottom:6px}
+.feature p{color:var(--muted);font-size:14px}
+
+/* CATEGORIES */
+.categories{padding:28px 0}
+.cat-list{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.cat{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(0,0,0,0.01));padding:14px 16px;border-radius:12px;cursor:pointer;min-width:140px;display:flex;gap:12px;align-items:center;transition:transform .18s, box-shadow .18s}
+.cat:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(2,6,23,0.5)}
+.cat img{width:44px;height:44px;border-radius:10px;object-fit:cover}
+
+/* WIDGETS */
+.widgets{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;padding:12px 0}
+.widget{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.45)}
+
+/* PRODUCTS */
+.products{padding:24px 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{background:linear-gradient(180deg,#0f1724, #0b121a);border-radius:12px;padding:0;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,0.6);transition:transform .18s}
+.card:hover{transform:translateY(-8px)}
+.thumb{height:140px;background:#0b1522;display:flex;align-items:center;justify-content:center}
+.card img{max-width:100%;max-height:100%;object-fit:contain}
+.info{padding:14px}
+.info h4{color:#fff;margin-bottom:6px}
+.price{font-weight:800;color:#e6eef8;margin-bottom:8px}
+.expiry{font-size:13px;color:var(--muted);display:flex;gap:8px;align-items:center}
+.badge{padding:4px 8px;border-radius:999px;font-weight:700;font-size:12px;color:#0b1624}
+.badge.green{background:var(--success)}.badge.yellow{background:#f9c74f}.badge.red{background:var(--danger)}
+.actions{display:flex;gap:8px;margin-top:12px}
+.btn.small{padding:8px 12px;border-radius:999px;font-weight:800}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:#fff}
+
+/* CART / WISHLIST */
+.cart-layout{display:grid;grid-template-columns:2fr 1fr;gap:18px}
+@media(max-width:980px){.cart-layout{grid-template-columns:1fr}}
+.cart-item{display:grid;grid-template-columns:84px 1fr auto;gap:12px;padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));align-items:center}
+.qty input{width:64px;padding:8px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff}
+
+/* FOOTER */
+.footer{padding:28px 0;text-align:center;color:var(--muted);margin-top:28px}
+
+/* UTILITIES */
+.small{font-size:13px;color:var(--muted)}
+.note{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:10px;border-radius:10px;color:var(--muted)}
+
+/* make the navbar logo text bolder & with subtle highlight */
+.logo strong{font-weight:900;letter-spacing:0.6px}

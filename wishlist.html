@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SmartShop • Wishlist</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+</head>
+<body>
+  <div id="root">
+  <nav>
+    <div class="container navbar">
+      <div class="logo"><img src="./images/logo.svg" alt="logo"><strong>SmartShop</strong></div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="wishlist.html">Wishlist</a></li>
+        <li><a href="cart.html">Cart <span class="cart-count small"></span></a></li>
+      </ul>
+      <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <main class="container" style="padding:24px 0 60px">
+    <h2 style="color:#fff">♡ Saved for Later</h2>
+    <section id="wishlist-items" style="margin-top:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px"></section>
+  </main>
+
+  <footer class="footer">© 2025 SmartShop (UI demo)</footer>
+  </div>
+  
+  <script type="text/babel">
+    function WishlistApp() {
+      const [wishlistItems, setWishlistItems] = React.useState([]);
+      
+      React.useEffect(() => {
+        // Read from localStorage on component mount
+        const wish = JSON.parse(localStorage.getItem('smartshop_wish_v1') || '[]');
+        setWishlistItems(wish);
+      }, []);
+
+      return (
+        <section id="wishlist-items" style={{
+          marginTop: '12px',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+          gap: '16px'
+        }}>
+          {wishlistItems.map(item => (
+            <div key={item.id} className="card" style={{padding: '10px'}}>
+              <div style={{display: 'flex', gap: '10px', alignItems: 'center'}}>
+                <img src={item.img} style={{width: '64px', height: '48px', objectFit: 'cover'}} alt={item.name} />
+                <div><strong>{item.name}</strong></div>
+              </div>
+            </div>
+          ))}
+        </section>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<WishlistApp />);
+  </script>
+</body>
+</html>
