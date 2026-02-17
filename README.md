@@ -5,7 +5,6 @@ It allows users to view products, add items to a cart, generate bills, and manag
 
 This project is created for **academic learning purposes** and demonstrates the use of **core Java concepts** in a real-world scenario.
 
----
 
 ## 🚀 Features
 
@@ -15,8 +14,6 @@ This project is created for **academic learning purposes** and demonstrates the 
 - 💰 Total cost calculation
 - 🔁 User-friendly menu-driven interface
 - 🛠️ Modular and readable Java code
-
----
 
 ## 🧠 Concepts Used
 
@@ -29,7 +26,6 @@ This project is created for **academic learning purposes** and demonstrates the 
 - Basic Input/Output handling
 - Clean code structure
 
----
 
 ## 🖥️ Tech Stack
 
@@ -37,7 +33,6 @@ This project is created for **academic learning purposes** and demonstrates the 
 - **IDE:** VS Code / IntelliJ / Eclipse  
 - **Platform:** Console-based application  
 
----
 
 ## 📂 Project Structure
 
