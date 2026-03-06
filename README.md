@@ -17,7 +17,7 @@ This project is created for **academic learning purposes** and demonstrates the 
 
 ## 🧠 Concepts Used
 
-- Object-Oriented Programming (OOP)
+- Object-Oriented Programming (OOPS)
   - Classes & Objects  
   - Encapsulation  
   - Methods & Constructors
